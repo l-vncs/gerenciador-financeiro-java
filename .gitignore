@@ -1,0 +1,16 @@
+# Arquivos compilados
+*.class
+
+# IDEs
+.idea/
+.vscode/
+
+# Build
+out/
+target/
+
+# Logs
+*.log
+
+# Sistema
+.DS_Store
