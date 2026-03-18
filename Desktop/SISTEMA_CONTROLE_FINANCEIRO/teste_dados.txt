@@ -1,0 +1,2 @@
+Receita;Salario;5000.0;20/05
+Despesa;Contas ;2000.0;21/05
