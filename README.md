@@ -1,26 +1,31 @@
-# Gerenciador Financeiro em Java
+# 💰 Financial Manager (Java)
 
-## Sobre o projeto
-Sistema de controle financeiro desenvolvido em Java com foco em prática de POO, persistência de dados e arquitetura em camadas.
+## 📌 About
 
-## Funcionalidades
-- Cadastro de receitas
-- Cadastro de despesas
-- Cálculo de saldo
-- Persistência em arquivo
+A personal finance manager developed in Java, focusing on Object-Oriented Programming, layered architecture, and data persistence.
 
-## Tecnologias
-- Java
-- Programação Orientada a Objetos
-- Manipulação de arquivos (FileReader / FileWriter)
+## 🚀 Features
 
-## Estrutura
-- model → entidades
-- service → regras de negócio
-- util → manipulação de arquivos
-- main → execução
+* Add income and expenses
+* Calculate balance
+* Store data in file
+* List all transactions
 
-## Melhorias futuras
-- Categorias
-- Interface gráfica
-- API REST com Spring Boot
+## 🛠️ Technologies
+
+* Java
+* OOP (Inheritance, Abstraction)
+* File Handling (FileReader / FileWriter)
+
+## 📂 Project Structure
+
+* model → entities
+* service → business logic
+* util → file handling
+* main → application entry point
+
+## 💡 Future Improvements
+
+* Categories
+* Filters by date
+* REST API with Spring Boot
