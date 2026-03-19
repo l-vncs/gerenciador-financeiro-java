@@ -14,7 +14,7 @@ public class ArquivoUtil {
     e transforma em um arquivo .txt*/
 
     //aqui é criado uma String para o caminho para facilitar o processo
-    private static final String CAMINHO = "SISTEMA_CONTROLE_FINANCEIRO/src/data/dados_financeiros.txt";
+    private static final String CAMINHO = "projeto-financeiro/src/data/dados_financeiros.txt";
 
     public static void salvar (List <Transacao> Transacoes){
         try{
