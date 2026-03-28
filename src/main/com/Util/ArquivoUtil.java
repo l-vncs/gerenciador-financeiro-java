@@ -1,9 +1,11 @@
-package Util;
-import Model.Despesa;
-import Model.Receita;
-import Model.Transacao;
+package com.Util;
+import com.Model.Despesa;
+import com.Model.Receita;
+import com.Model.Transacao;
 
 import java.io.*;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,7 +64,8 @@ public class ArquivoUtil {
                 String tipo = partes[0];
                 String descricao = partes[1];
                 double valor = Double.parseDouble(partes[2]);
-                String data = partes[3];
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+                LocalDate data = LocalDate.parse(partes[3], formatter);
 
                 if(tipo.equals("Receita")){
                     lista.add(new Receita(descricao, valor, data));

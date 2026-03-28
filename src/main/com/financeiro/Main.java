@@ -1,11 +1,12 @@
-package Main;
-import Model.Despesa;
-import Model.Receita;
-import Service.FinanceiroService;
+package com.financeiro;
 
+import com.Model.Despesa;
+import com.Model.Receita;
+import com.Service.FinanceiroService;
+import com.Service.TransacaoService;
 import java.time.LocalDate;
 import java.util.Scanner;
-import java.util.ArrayList;
+import java.time.format.DateTimeFormatter;
 
 public class Main {
     public static void main (String[] args){
@@ -15,6 +16,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         //A classe FinanceiroService recebe service como uma maneira de repassar a classe FinanceiroService
         FinanceiroService service= new FinanceiroService();
+        TransacaoService Tservice = new TransacaoService();
         service.carregarDados();
         int opcao;
        //Opcao do Switch Case
@@ -45,8 +47,10 @@ public class Main {
                 scanner.nextLine();
                 //Double nao consome buffer, portanto é preciso limpar manualmente
 
-                System.out.println("Digite a data: ");
-                String data = scanner.nextLine();
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+                System.out.print("Digite a data (DD/MM/AAAA):");
+                String dataInput = scanner.nextLine();
+                LocalDate data = LocalDate.parse(dataInput, formatter);
 
                 //Receita passa o valor para "r" que recebe os atributos da Receita (descricao, valor e data)
                 Receita r = new Receita(descricao, valor, data);
@@ -69,8 +73,10 @@ public class Main {
                 valor = scanner.nextDouble();
                 scanner.nextLine();
 
-                System.out.println("Digite a data: ");
-                data = scanner.nextLine();
+                formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+                System.out.print("Digite a data (DD-MM-AAAA):");
+                dataInput = scanner.nextLine();
+                data = LocalDate.parse(dataInput, formatter);
 
                 //Mesma coisa aqui para a despesa
                 Despesa d = new Despesa(descricao, valor, data);
